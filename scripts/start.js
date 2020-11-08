@@ -57,7 +57,7 @@ choosePort(HOST, DEFAULT_PORT).then(port => {
 
   const urls = prepareUrls('http', HOST, port);
 
-  server.listen(port, HOST, err => {
+  server.listen(port, err => {
     if (err) {
       return console.log(err);
     }
