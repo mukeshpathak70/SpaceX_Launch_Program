@@ -116,17 +116,10 @@ module.exports = function(envType) {
       // CSS
       {
         test: /\.css$/,
-        use:  IS_DEV 
-          ? [
+        use: [
             'style-loader',
             {loader: 'css-loader', options: { importLoaders: 1 }}
-          ]:
-          ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              {loader: 'css-loader', options: { importLoaders: 1 }}
-            ]
-          })
+          ]
       },
       {
         test: /\.s?css$/,

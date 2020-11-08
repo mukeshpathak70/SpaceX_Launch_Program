@@ -61,9 +61,9 @@ const Home = () => {
             <div className="resultContainer">
               <Row className="flexRow">
                 {missionData.map((mission, i) => {
-                  return <div className="resultItem">
+                  return <div key={i} className="resultItem">
                     <div>
-                      <div className="imageBox"><img src={mission.links.mission_patch_small} /></div>
+                      <div className="imageBox"><img src={mission.links.mission_patch_small} alt={`${mission.mission_name}`}/></div>
                       <div className="missionInfo">
                         <a href={mission.links.article_link}>{mission.mission_name}</a>
                         <p>Mission Ids: {!mission.mission_id.length && (<span>NA</span>)}</p>
